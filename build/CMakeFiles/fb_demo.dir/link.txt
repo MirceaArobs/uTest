@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/fb_demo.dir/link.d CMakeFiles/fb_demo.dir/main.cpp.o -o fb_demo  /usr/lib/arm-linux-gnueabihf/libQt5Widgets.so.5.15.15 /usr/lib/arm-linux-gnueabihf/libQt5Gui.so.5.15.15 /usr/lib/arm-linux-gnueabihf/libQt5Core.so.5.15.15

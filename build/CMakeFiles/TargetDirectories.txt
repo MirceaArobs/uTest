@@ -1,0 +1,3 @@
+/home/mp/uTest/build/CMakeFiles/fb_demo.dir
+/home/mp/uTest/build/CMakeFiles/edit_cache.dir
+/home/mp/uTest/build/CMakeFiles/rebuild_cache.dir
