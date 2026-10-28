@@ -1,0 +1,3 @@
+1. check why after dragging items to active list they are not show there
+2. use lines to show the gpio events (like on logic analyzer software puseview for example)
+3. show actual byte values of data received or sent via communication interfaces (like uart)

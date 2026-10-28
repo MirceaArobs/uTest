@@ -17,6 +17,8 @@ additional space in the GUI will be reserved for:
  b. trace data flow view (an oscilloscope like view that shows the events and their corresponding timestamps); the events can be any of a gpio line toggle or a message sent or received via any communication port
  
  the program will save the test logs including the trace data and summary of a test execution (that will group the info of all tests executed in that batch)
+
+ The main window shows the test catalog and active-items list side by side; drag catalog entries to the active list to add them. A single row of controls sits immediately above the rolling 30-second UART/GPIO event timeline. A crosshair follows the mouse over the graph to make event markers easier to target. Demo event buttons add sample events; labels are shortened to two characters, and selecting a marker shows its elapsed timestamp and complete details in the status line at the bottom of the window. **Pause scroll** freezes the display while capture continues. **Stop capture** pauses scrolling and ignores incoming events; while stopped, use Older/Newer or drag the graph horizontally to browse captured history, and use Zoom -/Zoom + or the mouse wheel to change the displayed time range. Channel handlers should pass received data to `EventTimeline::addEvent(channel, details)` (for example, from a UART receive callback or GPIO edge handler). Demo buttons do not open device ports or configure GPIO hardware.
  
  HowTo:
  

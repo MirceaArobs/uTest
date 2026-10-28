@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(fb_demo LANGUAGES CXX)
+project(uTest LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -14,6 +14,6 @@ else()
     set(QT_WIDGETS_LIB Qt5::Widgets)
 endif()
 
-add_executable(fb_demo main.cpp)
-target_link_libraries(fb_demo PRIVATE ${QT_WIDGETS_LIB})
+add_executable(uTest main.cpp)
+target_link_libraries(uTest PRIVATE ${QT_WIDGETS_LIB})
 
