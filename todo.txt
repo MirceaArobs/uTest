@@ -5,3 +5,18 @@ done 4. when pressing the uartButton realy sent a dummy variable length telegram
 done 5. when pressing the gpioButton really toggle the pin 11 (GPIO17) of the rpi
 done 6. add a task (that runs with high prio on a dedicated rpi core) to monitor the uart port (for eventual received telegrams) and input pin 15 (GPIO22) for level changes
 done 7. if possible implement a collision detection: uart telegram received when trying to send a uart telegram; mark the colisions on graph with orange color
+8. improve the presentation of serial data(uart, spi, can ...); 
+show aliases of the telegram (according to a predefined catalog); 
+if the telegram does not match any entry from the catalog then show ? (question mark) followed by the first 5 byte values from the telegram (hex values); in this case the telegram will occupy 2 columns
+show them vertically (one letter over the other: max 8 letters) so many telegrams can fit if the zoom level is far 
+when hovering over the trace decoration / dot, the telegram data is shown in a message box that appears near the mouse pointer.
+9. improve the presentation of the gpio levels: provide the posibility to show them separately or stacked together (with different colors)
+10. add test events on graph (on a separate row) - like for example "tout" in red if a wait timeout happens; or a green "ok" if the message is received before timeout
+11. add a test interpreter: 
+the test will be defined by some keywords: action, parameter, condition, timedelay, inputEvent; 
+a test combines the keywords in a sequnce; for example:
+ aSendUart(cmd34)
+ aWait(UartRx, 100)
+ if evReceived rPassed
+ if timeout rFailed
+
