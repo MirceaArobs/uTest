@@ -1,3 +1,7 @@
-1. check why after dragging items to active list they are not show there
-2. use lines to show the gpio events (like on logic analyzer software puseview for example)
-3. show actual byte values of data received or sent via communication interfaces (like uart)
+done 1. check why after dragging items to active list they are not show there
+done 2. use lines to show the gpio events (like on logic analyzer software puseview for example)
+done 3. show actual byte values of data received or sent via communication interfaces (like uart)
+done 4. when pressing the uartButton realy sent a dummy variable length telegram on the uart port of the rpi
+done 5. when pressing the gpioButton really toggle the pin 11 (GPIO17) of the rpi
+done 6. add a task (that runs with high prio on a dedicated rpi core) to monitor the uart port (for eventual received telegrams) and input pin 15 (GPIO22) for level changes
+done 7. if possible implement a collision detection: uart telegram received when trying to send a uart telegram; mark the colisions on graph with orange color
